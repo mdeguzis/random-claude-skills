@@ -13,9 +13,9 @@ Download a video from VCU Canvas using Kaltura debug info.
 
 3. **Run the download** using yt-dlp:
    ```
-   yt-dlp "<manifestUrl>" -o "/Users/alvinatyr/vcu-video-transcripts/<entryId>.mp4"
+   /opt/homebrew/bin/yt-dlp --downloader ffmpeg --hls-use-mpegts "<manifestUrl>" -o "/Users/alvinatyr/vcu-video-transcripts/<entryId>.mp4"
    ```
-   Use the full path `/opt/homebrew/bin/yt-dlp` if `yt-dlp` is not found in PATH.
+   If ffmpeg is not installed, omit `--downloader ffmpeg --hls-use-mpegts` (yt-dlp's native HLS downloader will be used as a fallback).
 
 4. **Confirm** the file was saved to `/Users/alvinatyr/vcu-video-transcripts/`.
 

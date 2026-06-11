@@ -15,6 +15,7 @@ HOW TO DOWNLOAD A VIDEO
 REQUIREMENTS
 ------------
 - yt-dlp (install: brew install yt-dlp)
+- ffmpeg (recommended: brew install ffmpeg — required for best HLS download performance)
 
 NOTES
 -----
