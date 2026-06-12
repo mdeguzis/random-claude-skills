@@ -22,7 +22,11 @@ Download a video from VCU Canvas, extract and clean up a transcript, offer to re
    ```
    This produces `<entryId>.txt` in the output folder.
 
-5. **Clean up the transcript:** Read the raw `.txt` file and rewrite it — group sentences into logical paragraphs by topic, add section headers where natural breaks exist, and remove filler/repetition. Write the cleaned version back to the same file.
+5. **Clean up the transcript:** Read the raw `.txt` file and rewrite it with ONLY the following changes — do NOT remove, rephrase, summarize, or alter any words:
+   - Add blank lines between paragraphs at natural topic shifts
+   - Optionally add a plain-text section header (e.g. `RATIONALE`, `ANATOMY`) before a new topic block where it helps readability
+   - Every single word from the original must be preserved verbatim, including filler words, false starts, and repetitions
+   Write the result back to the same file.
 
 6. **Show the user** the transcript file path and ask:
    > "Transcript is ready at ~/vcu-video-transcripts/<entryId>.txt — does it look correct?"
